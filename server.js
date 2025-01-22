@@ -16,12 +16,11 @@ app.get('/hello',(req,res)=>{
 })
 
 app.get('/biccccccc',(req,res)=>{
-    res.send(`my app running at ${process.env.DEV_MODE}`)
+    res.send(`my app running at`)
 })
 const PORT =5000;
 
 
 app.listen(PORT,()=>{
     console.log(`Server started at ${PORT}` );
-    console.log(conn)
 })
