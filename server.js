@@ -3,6 +3,7 @@ const app = express();
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import connectDB from './config/db.js';
+import authRoutes from './routes/authRoute.js'
 dotenv.config();
 connectDB();
 
@@ -10,6 +11,7 @@ app.use(morgan('dev'))
 //middleware to req and res the json data
 
 app.use(express.json())
+app.use('/api/v1/auth',authRoutes);
 
 app.get('/hello',(req,res)=>{
     console.log("hello")
