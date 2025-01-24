@@ -6,7 +6,7 @@ import connectDB from './config/db.js';
 import authRoutes from './routes/authRoute.js'
 dotenv.config();
 connectDB();
-
+-
 app.use(morgan('dev'))
 //middleware to req and res the json data
 

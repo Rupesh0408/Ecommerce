@@ -5,8 +5,8 @@ import express from "express";
 
     const connectDB  = async()=>{
         try{
-       await mongoose.connect(process.env.MONOGO_URL);
-        console.log("Connected to mongo")
+            const conn = await mongoose.connect(process.env.MONOGO_URL);
+        console.log(`connected to the monogodb ${conn.connection.host}`)
     } 
     catch(error){
         console.log(`Connecting to the Server ${error}`)
